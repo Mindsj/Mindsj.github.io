@@ -79,14 +79,19 @@
 
 
 
+<meta name="description" content="搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github page+hexo搭建博客">
 <meta property="og:url" content="http://mindsj.github.io/2018/01/12/github-page-hexo搭建博客/index.html">
 <meta property="og:site_name" content="Mindsjj&#39;s Blog">
+<meta property="og:description" content="搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T03:58:00.355Z">
+<meta property="og:image" content="http://p2dvcpiop.bkt.clouddn.com/step1.png">
+<meta property="og:updated_time" content="2018-01-12T07:53:54.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github page+hexo搭建博客">
+<meta name="twitter:description" content="搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下">
+<meta name="twitter:image" content="http://p2dvcpiop.bkt.clouddn.com/step1.png">
 
 
 
@@ -312,6 +317,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/12/github-page-hexo搭建博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/12/github-page-hexo搭建博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -336,7 +351,10 @@
       
 
       
-        
+        <p>搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下<br><a id="more"></a></p>
+<h1 id="Github-Page"><a href="#Github-Page" class="headerlink" title="Github Page"></a>Github Page</h1><p>github注册就不多说了,我们直接从新建库开始<br>1.点击头像旁下拉菜单，选择新建仓库<br><img src="http://p2dvcpiop.bkt.clouddn.com/step1.png" alt="新建仓库"></p>
+<p>2.</p>
+
       
     </div>
     
@@ -427,6 +445,16 @@
           
 
   
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
 
 
 
@@ -449,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -514,6 +551,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Page"><span class="nav-number">1.</span> <span class="nav-text">Github Page</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -691,6 +744,48 @@
 
 
 
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Mindsj',
+            repo: 'Mindsj.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '13debf631996fa9a3f34cdbfbfc3eb653bc8dd82',
+            
+                client_id: '0747aad02fdeb5e026a6'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
