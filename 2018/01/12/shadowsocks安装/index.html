@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Mindsjj&#39;s Blog">
 <meta property="og:description" content="之前搭建ss的时候遇到的一些问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T03:08:00.126Z">
+<meta property="og:updated_time" content="2018-01-12T05:21:05.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shadowsocks安装">
 <meta name="twitter:description" content="之前搭建ss的时候遇到的一些问题">
@@ -363,14 +363,16 @@
 
       
         <p>之前搭建ss的时候遇到的一些问题<br><a id="more"></a></p>
-<h1 id="一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><a href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位" class="headerlink" title="一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位"></a>一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</h1><p>点我跳转(<a href="https://bwh1.net/cart.php?a=confproduct&amp;i=0" target="_blank" rel="noopener">https://bwh1.net/cart.php?a=confproduct&amp;i=0</a>)</p>
-<h1 id="二、服务器配置"><a href="#二、服务器配置" class="headerlink" title="二、服务器配置"></a>二、服务器配置</h1><p>ssh连接服务器<br>root用户登录执行：<br>wget –no-check-certificate -O shadowsocks.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
-<h2 id="可能出现的问题："><a href="#可能出现的问题：" class="headerlink" title="可能出现的问题："></a>可能出现的问题：</h2><p>-bash: wget: command not found</p>
-<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>yum -y install wget</p>
-<h3 id="修改端口号："><a href="#修改端口号：" class="headerlink" title="修改端口号："></a>修改端口号：</h3><p>/etc下shadowsocks.json文件</p>
-<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><p>shadowsocks：/etc/init.d/shadowsocks restart</p>
-<h3 id="关闭防火墙（iptables）："><a href="#关闭防火墙（iptables）：" class="headerlink" title="关闭防火墙（iptables）："></a>关闭防火墙（iptables）：</h3><p>/etc/init.d/iptables stop</p>
-<h3 id="没有配上图文，主要后期慢慢补上"><a href="#没有配上图文，主要后期慢慢补上" class="headerlink" title="没有配上图文，主要后期慢慢补上"></a>没有配上图文，主要后期慢慢补上</h3>
+<h1 id="一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><a href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位" class="headerlink" title="一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位"></a>一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</h1><p><a href="https://bwh1.net/cart.php?a=confproduct&amp;i=0" target="_blank" rel="noopener">点我跳转</a><br>之前买的是这个配置KVMV3-10G-512M-500M-CA-CN2，每个月有500G的流量，一年的价格是29.99美元，建议地址选在洛杉矶。个人觉得还是比较划算的，但是最近看官网好像没有存货了。</p>
+<h1 id="二、服务器配置"><a href="#二、服务器配置" class="headerlink" title="二、服务器配置"></a>二、服务器配置</h1><pre><code>1.wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+2.chmod +x shadowsocks.sh
+3../shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log
+</code></pre><h2 id="可能出现的问题："><a href="#可能出现的问题：" class="headerlink" title="可能出现的问题："></a>可能出现的问题：</h2><pre><code>-bash: wget: command not found
+</code></pre><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><pre><code>yum -y install wget
+</code></pre><h3 id="修改端口号："><a href="#修改端口号：" class="headerlink" title="修改端口号："></a>修改端口号：</h3><p>/etc下shadowsocks.json文件</p>
+<h3 id="重启shadowsocks："><a href="#重启shadowsocks：" class="headerlink" title="重启shadowsocks："></a>重启shadowsocks：</h3><pre><code>/etc/init.d/shadowsocks restart
+</code></pre><h3 id="关闭防火墙（iptables）："><a href="#关闭防火墙（iptables）：" class="headerlink" title="关闭防火墙（iptables）："></a>关闭防火墙（iptables）：</h3><pre><code>/etc/init.d/iptables stop
+</code></pre><h3 id="没有配上图文，后期有时间会慢慢补上"><a href="#没有配上图文，后期有时间会慢慢补上" class="headerlink" title="没有配上图文，后期有时间会慢慢补上"></a>没有配上图文，后期有时间会慢慢补上</h3>
       
     </div>
     
@@ -438,6 +440,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/12/github-page-hexo搭建博客/" rel="prev" title="github page+hexo搭建博客">
+                github page+hexo搭建博客 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -518,7 +524,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -573,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><span class="nav-number">1.</span> <span class="nav-text">一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、服务器配置"><span class="nav-number">2.</span> <span class="nav-text">二、服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可能出现的问题："><span class="nav-number">2.1.</span> <span class="nav-text">可能出现的问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法："><span class="nav-number">2.1.1.</span> <span class="nav-text">解决办法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改端口号："><span class="nav-number">2.1.2.</span> <span class="nav-text">修改端口号：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启"><span class="nav-number">2.1.3.</span> <span class="nav-text">重启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭防火墙（iptables）："><span class="nav-number">2.1.4.</span> <span class="nav-text">关闭防火墙（iptables）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没有配上图文，主要后期慢慢补上"><span class="nav-number">2.1.5.</span> <span class="nav-text">没有配上图文，主要后期慢慢补上</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><span class="nav-number">1.</span> <span class="nav-text">一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、服务器配置"><span class="nav-number">2.</span> <span class="nav-text">二、服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可能出现的问题："><span class="nav-number">2.1.</span> <span class="nav-text">可能出现的问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法："><span class="nav-number">2.1.1.</span> <span class="nav-text">解决办法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改端口号："><span class="nav-number">2.1.2.</span> <span class="nav-text">修改端口号：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启shadowsocks："><span class="nav-number">2.1.3.</span> <span class="nav-text">重启shadowsocks：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭防火墙（iptables）："><span class="nav-number">2.1.4.</span> <span class="nav-text">关闭防火墙（iptables）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没有配上图文，后期有时间会慢慢补上"><span class="nav-number">2.1.5.</span> <span class="nav-text">没有配上图文，后期有时间会慢慢补上</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
