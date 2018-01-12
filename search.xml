@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[先说几句]]></title>
-    <url>%2F2018%2F01%2F11%2F%E5%85%88%E8%AF%B4%E5%87%A0%E5%8F%A5%2F</url>
-    <content type="text"><![CDATA[开始之前，先闲聊几句。一直想建个博客，主要用来记录一下前端学习道路上遇到的一些坑。网上搜了挺多教程，知乎上很多人推荐这个就试了下。之前做的大多是cms相关的工作，标准的切图仔。痛定思痛，要好好走自己的前端道路了。一入代码深似海，从此妹子是路人。]]></content>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[shadowsocks安装]]></title>
+      <url>/2018/01/12/shadowsocks%E5%AE%89%E8%A3%85/</url>
+      <content type="html"><![CDATA[<p>之前搭建ss的时候遇到的一些问题<br><a id="more"></a></p>
+<h1 id="一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><a href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位" class="headerlink" title="一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位"></a>一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</h1><p>点我跳转(<a href="https://bwh1.net/cart.php?a=confproduct&amp;i=0" target="_blank" rel="noopener">https://bwh1.net/cart.php?a=confproduct&amp;i=0</a>)</p>
+<h1 id="二、服务器配置"><a href="#二、服务器配置" class="headerlink" title="二、服务器配置"></a>二、服务器配置</h1><p>ssh连接服务器<br>root用户登录执行：<br>wget –no-check-certificate -O shadowsocks.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
+<h2 id="可能出现的问题："><a href="#可能出现的问题：" class="headerlink" title="可能出现的问题："></a>可能出现的问题：</h2><p>-bash: wget: command not found</p>
+<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>yum -y install wget</p>
+<h3 id="修改端口号："><a href="#修改端口号：" class="headerlink" title="修改端口号："></a>修改端口号：</h3><p>/etc下shadowsocks.json文件</p>
+<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><p>shadowsocks：/etc/init.d/shadowsocks restart</p>
+<h3 id="关闭防火墙（iptables）："><a href="#关闭防火墙（iptables）：" class="headerlink" title="关闭防火墙（iptables）："></a>关闭防火墙（iptables）：</h3><p>/etc/init.d/iptables stop</p>
+<h3 id="没有配上图文，主要后期慢慢补上"><a href="#没有配上图文，主要后期慢慢补上" class="headerlink" title="没有配上图文，主要后期慢慢补上"></a>没有配上图文，主要后期慢慢补上</h3>]]></content>
+      
+        <categories>
+            
+            <category> 教程 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[先说几句]]></title>
+      <url>/2018/01/11/%E5%85%88%E8%AF%B4%E5%87%A0%E5%8F%A5/</url>
+      <content type="html"><![CDATA[<p>开始之前，先闲聊几句。<br><a id="more"></a><br>一直想建个博客，主要用来记录一下前端学习道路上遇到的一些坑。<br>网上搜了挺多教程，知乎上很多人推荐这个就试了下。<br>之前做的大多是cms相关的工作，标准的切图仔。痛定思痛，要好好走自己的前端道路了。<br>一入代码深似海，从此妹子是路人。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 随便写写 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+            <tag> 鸡汤 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
 </search>
