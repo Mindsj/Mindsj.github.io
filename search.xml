@@ -1,72 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[github page+hexo搭建博客]]></title>
-      <url>/2018/01/12/github-page-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<p>搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下<br><a id="more"></a></p>
-<h1 id="Github-Page"><a href="#Github-Page" class="headerlink" title="Github Page"></a>Github Page</h1><p>github注册就不多说了,我们直接从新建库开始<br>1.点击头像旁下拉菜单，选择新建仓库<br>仓库名建议为：用户名.github.io<br><img src="http://p2dvcpiop.bkt.clouddn.com/step1.png" alt="新建仓库"></p>
-<p>2.新建好仓库选择”Settings”,找到Github Pages,选择一个主题，确认</p>
-<p>3.接下来就可以直接访问了,地址为：<br>注意：如果你的仓库名是按上述，用户名.github.io形式设置，则仓库名及为访问地址。如果你想自定义绑定自己的域名，还是建议按上面的仓库名格式设置<br>如果仓库名是随意取的，地址则为<a href="https://github.com/用户名/仓库名" target="_blank" rel="noopener">https://github.com/用户名/仓库名</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[shadowsocks安装]]></title>
-      <url>/2018/01/12/shadowsocks%E5%AE%89%E8%A3%85/</url>
-      <content type="html"><![CDATA[<p>之前搭建ss的时候遇到的一些问题<br><a id="more"></a></p>
-<h1 id="一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位"><a href="#一、购买服务器（优惠码：BWH1ZBPVK）CentOS-6-64位" class="headerlink" title="一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位"></a>一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位</h1><p><a href="https://bwh1.net/cart.php?a=confproduct&amp;i=0" target="_blank" rel="noopener">点我跳转</a><br>之前买的是这个配置KVMV3-10G-512M-500M-CA-CN2，每个月有500G的流量，一年的价格是29.99美元，建议地址选在洛杉矶。个人觉得还是比较划算的，但是最近看官网好像没有存货了。</p>
-<h1 id="二、服务器配置"><a href="#二、服务器配置" class="headerlink" title="二、服务器配置"></a>二、服务器配置</h1><pre><code>1.wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
-2.chmod +x shadowsocks.sh
-3../shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log
-</code></pre><h2 id="可能出现的问题："><a href="#可能出现的问题：" class="headerlink" title="可能出现的问题："></a>可能出现的问题：</h2><pre><code>-bash: wget: command not found
-</code></pre><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><pre><code>yum -y install wget
-</code></pre><h3 id="修改端口号："><a href="#修改端口号：" class="headerlink" title="修改端口号："></a>修改端口号：</h3><p>/etc下shadowsocks.json文件</p>
-<h3 id="重启shadowsocks："><a href="#重启shadowsocks：" class="headerlink" title="重启shadowsocks："></a>重启shadowsocks：</h3><pre><code>/etc/init.d/shadowsocks restart
-</code></pre><h3 id="关闭防火墙（iptables）："><a href="#关闭防火墙（iptables）：" class="headerlink" title="关闭防火墙（iptables）："></a>关闭防火墙（iptables）：</h3><pre><code>/etc/init.d/iptables stop
-</code></pre><h3 id="没有配上图文，后期有时间会慢慢补上"><a href="#没有配上图文，后期有时间会慢慢补上" class="headerlink" title="没有配上图文，后期有时间会慢慢补上"></a>没有配上图文，后期有时间会慢慢补上</h3>]]></content>
-      
-        <categories>
-            
-            <category> 教程 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 技术 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[先说几句]]></title>
-      <url>/2018/01/11/%E5%85%88%E8%AF%B4%E5%87%A0%E5%8F%A5/</url>
-      <content type="html"><![CDATA[<p>开始之前，先闲聊几句。<br><a id="more"></a><br>一直想建个博客，主要用来记录一下前端学习道路上遇到的一些坑。<br>网上搜了挺多教程，知乎上很多人推荐这个就试了下。<br>之前做的大多是cms相关的工作，标准的切图仔。痛定思痛，要好好走自己的前端道路了。<br>一入代码深似海，从此妹子是路人。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 随便写写 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-            <tag> 鸡汤 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[github page+hexo搭建博客]]></title>
+    <url>%2F2018%2F01%2F12%2Fgithub-page-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下 Github Pagegithub注册就不多说了,我们直接从新建库开始1.点击头像旁下拉菜单，选择新建仓库仓库名建议为：用户名.github.io 2.新建好仓库选择”Settings”,找到Github Pages,选择一个主题，确认 3.接下来就可以直接访问了,地址为：注意：如果你的仓库名是按上述，用户名.github.io形式设置，则仓库名即为访问地址。如果你想自定义绑定自己的域名，还是建议按上面的仓库名格式设置如果仓库名是随意取的，地址则为https://github.com/用户名/仓库名 下载并安装Git下载根据自己电脑操作系统到git官网下载相应的版本：https://git-scm.com/download/win 安装根据自己需要安装到相应的路径下，其余的选择next即可 配置环境变量右击桌面图标计算机，选择属性–&gt;高级系统设置，选择环境变量，编辑path，将git的安装目录粘贴添加到path后。（每一个新增的路径后要带上英文格式的分号） 测试是否安装成功打开命令提示符，输入： git –version安装成功会打印出本机安装的git版本。 添加SSH KEY到Github（1）检查本机是否有SSH KEY设置打开git bash，输入: cd~/.ssh或cd.ssh如果没有则提示：No such file or directory如有则进入~/.ssh路径，删除所有文件 （2）配置生成SSH KEY1.$ cd ~ #保证当前路径在”~”下 2.$ ssh-keygen -t rsa -C &quot;这里填写你的邮箱地址&quot; 3.Generating public/private rsa key pair. 4.Enter file in which to save the key (/c/Users/xxxx_000/.ssh/id_rsa): #不填直接回车 5.Enter passphrase (empty for no passphrase): #输入密码（可以为空） 6.Enter same passphrase again: #再次确认密码（可以为空） 7.Your identification has been saved in /c/Users/xxxx_000/.ssh/id_rsa. #生成的密钥 8.Your public key has been saved in /c/Users/xxxx_000/.ssh/id_rsa.pub. #生成的公钥 9.The key fingerprint is: 10.e3:51:33:xx:xx:xx:xx:xxx:61:28:83:e2:81 xxxxxx@yy.com 生成ssh key的存放路径为：c:/Users/你电脑的用户名/.ssh/下。 （3）复制SSH KEY到Github到C盘你的用户目录下找到.ssh文件夹，查看里面是否有id_rsa和id_rsa.pub这两个文件。 登录GitHub系统；点击右上角账号头像的“▼”→Settings→SSH and GPG kyes→new SSH key，Title自定义，复制id_rsa.pub的公钥内容到GitHub中Add an SSH key的key输入框，最后“Add Key”。 （4）配置账户1.$ git config --global user.name “your_username” #设置用户名 2.$ git config --global user.email “your_registered_github_Email” 3.#设置邮箱地址(建议用注册giuhub的邮箱) （5）测试SSH KEY是否设置成功$ ssh -T git@github.com 接下来会返回一些信息，并需要你输入一次yes，若生成ssh key时设置有密码则还会让你输入生成ssh key时设置的密码。Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. #出现词句话，说明设置成功。 下载并安装node.js下载根据自己电脑操作系统的位数到官网下载相应的版本：https://nodejs.org/en/download/ 安装根据自己的需要安装到相应的地方，其他的一路点击next即可。 配置环境变量选中桌面图标计算机，右键选择属性，打开左边的高级系统设置，打开弹出窗口的环境变量，找到path进行编辑。找到node.js的安装目录，将其复制后粘贴到path后面。注意每一个加进来的路径后面都要带英文格式的分号。 测试是否安装成功打开命令提示符，输入：node –version如果安装成功，会打印出本机安装node.js的版本。 安装和配置hexohexo是基于node.js的静态博客，官网也是搭建在GitHub上。 安装在你喜欢的路径下新建一个文件夹blog，用来存放博客的文件，在此文件夹中右键打开Git Bash输入如下指令进行安装： $ npm install -g hexo-cli如果执行这条命令时长时间未成功，那么请先使用下面的命令将npm镜像源更改为国内的镜像，再执行上面的安装命令，因为国外的镜像源很有可能被墙了。 $ npm config set registry https://registry.npm.taobao.org 初始化hexo$ hexo init hexo 这里会将Github上的hexo项目clone下来，得到hexo文件夹。初始化成功后会在最后打印一行：INFO Start blogging with Hexo! 安装依赖文件1.$ cd hexo 2.$ npm install 生成静态页面$ hexo generate 本地启动测试$ hexo server 在浏览器输入：http://localhost:4000/ 即可访问到我们搭建好的hexo站点。至此本地搭建已经完成。 将本地hexo项目托管到Github修改全局配置文件_config.yml说明： hexo文件夹下一个_config.yml，我们称之为全局配置文件，在每个主题文件夹内还会有一个_config.yml文件，我们称之为主题配置文件。用sublime text3或者notepad++等编辑器打开hexo文件夹下的_config.yml文件。注意：配置文件中每个字段后面的冒号是英文格式的，且在其后要加一个空格再写值编辑最后面的deploy属性，加入代码： 1.type: git 2.repository: https://github.com/你的Github用户名/你的Github用户名.github.io.git 3.branch: master 安装hexo-deployer-git插件$ npm install hexo-deployer-git --save 部署到Github上1.$ hexo clean #清除缓存 网页正常情况下可以忽略此条命令 2.$ hexo generate #生成静态页面至public目录 3.$ hexo deploy #将.deploy目录部署到GitHub 执行hexo deploy命令之后，如果最后一行打印出如下信息则表示部署成功 INFO Deploy done: git然后你再去访问你创建的Github pages地址，也就是：你的Github用户名.github.io，即可看到你本地的hexo项目已经被部署到github上去了。 到此已经可以在网上访问到自己的博客了，如果想自定义博客的域名需要两个步骤1.自己申请个域名，将博客地址解析到域名2.在github项目下新建个CNAME文件，不要给后缀名，文件里输入你申请的域名即可 这篇文章就到这里，下篇写下hexo主题更换以及文章如何上传。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[shadowsocks安装]]></title>
+    <url>%2F2018%2F01%2F12%2Fshadowsocks%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[之前搭建ss的时候遇到的一些问题 一、购买服务器（优惠码：BWH1ZBPVK）CentOS 6 64位点我跳转之前买的是这个配置KVMV3-10G-512M-500M-CA-CN2，每个月有500G的流量，一年的价格是29.99美元，建议地址选在洛杉矶。个人觉得还是比较划算的，但是最近看官网好像没有存货了。 二、服务器配置1.wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh 2.chmod +x shadowsocks.sh 3../shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log 可能出现的问题：-bash: wget: command not found 解决办法：yum -y install wget 修改端口号：/etc下shadowsocks.json文件 重启shadowsocks：/etc/init.d/shadowsocks restart 关闭防火墙（iptables）：/etc/init.d/iptables stop 没有配上图文，后期有时间会慢慢补上]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[先说几句]]></title>
+    <url>%2F2018%2F01%2F11%2F%E5%85%88%E8%AF%B4%E5%87%A0%E5%8F%A5%2F</url>
+    <content type="text"><![CDATA[开始之前，先闲聊几句。一直想建个博客，主要用来记录一下前端学习道路上遇到的一些坑。网上搜了挺多教程，知乎上很多人推荐这个就试了下。之前做的大多是cms相关的工作，标准的切图仔。痛定思痛，要好好走自己的前端道路了。一入代码深似海，从此妹子是路人。]]></content>
+      <categories>
+        <category>随便写写</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>鸡汤</tag>
+      </tags>
+  </entry>
 </search>

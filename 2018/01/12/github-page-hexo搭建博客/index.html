@@ -87,7 +87,7 @@
 <meta property="og:description" content="搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p2dvcpiop.bkt.clouddn.com/step1.png">
-<meta property="og:updated_time" content="2018-01-12T09:43:42.534Z">
+<meta property="og:updated_time" content="2018-01-13T16:12:24.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github page+hexo搭建博客">
 <meta name="twitter:description" content="搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下">
@@ -383,7 +383,51 @@
         <p>搭建博客的时候看了很多知乎大神的教程，也遇到了不少问题，这里把教程和问题整理下<br><a id="more"></a></p>
 <h1 id="Github-Page"><a href="#Github-Page" class="headerlink" title="Github Page"></a>Github Page</h1><p>github注册就不多说了,我们直接从新建库开始<br>1.点击头像旁下拉菜单，选择新建仓库<br>仓库名建议为：用户名.github.io<br><img src="http://p2dvcpiop.bkt.clouddn.com/step1.png" alt="新建仓库"></p>
 <p>2.新建好仓库选择”Settings”,找到Github Pages,选择一个主题，确认</p>
-<p>3.接下来就可以直接访问了,地址为：<br>注意：如果你的仓库名是按上述，用户名.github.io形式设置，则仓库名及为访问地址。如果你想自定义绑定自己的域名，还是建议按上面的仓库名格式设置<br>如果仓库名是随意取的，地址则为<a href="https://github.com/用户名/仓库名" target="_blank" rel="noopener">https://github.com/用户名/仓库名</a></p>
+<p>3.接下来就可以直接访问了,地址为：<br>注意：如果你的仓库名是按上述，用户名.github.io形式设置，则仓库名即为访问地址。如果你想自定义绑定自己的域名，还是建议按上面的仓库名格式设置<br>如果仓库名是随意取的，地址则为<a href="https://github.com/用户名/仓库名" target="_blank" rel="noopener">https://github.com/用户名/仓库名</a></p>
+<h1 id="下载并安装Git"><a href="#下载并安装Git" class="headerlink" title="下载并安装Git"></a>下载并安装Git</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>根据自己电脑操作系统到git官网下载相应的版本：<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>根据自己需要安装到相应的路径下，其余的选择next即可</p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>右击桌面图标计算机，选择属性–&gt;高级系统设置，选择环境变量，编辑path，将git的安装目录粘贴添加到path后。（每一个新增的路径后要带上英文格式的分号）</p>
+<h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><p>打开命令提示符，输入：<br>        git –version<br>安装成功会打印出本机安装的git版本。</p>
+<h1 id="添加SSH-KEY到Github"><a href="#添加SSH-KEY到Github" class="headerlink" title="添加SSH KEY到Github"></a>添加SSH KEY到Github</h1><h2 id="（1）检查本机是否有SSH-KEY设置"><a href="#（1）检查本机是否有SSH-KEY设置" class="headerlink" title="（1）检查本机是否有SSH KEY设置"></a>（1）检查本机是否有SSH KEY设置</h2><p>打开git bash，输入:<br>        cd~/.ssh或cd.ssh<br>如果没有则提示：No such file or directory<br>如有则进入~/.ssh路径，删除所有文件</p>
+<h2 id="（2）配置生成SSH-KEY"><a href="#（2）配置生成SSH-KEY" class="headerlink" title="（2）配置生成SSH KEY"></a>（2）配置生成SSH KEY</h2><pre><code>1.$ cd ~  #保证当前路径在”~”下
+2.$ ssh-keygen -t rsa -C &quot;这里填写你的邮箱地址&quot;
+3.Generating public/private rsa key pair.
+4.Enter file in which to save the key (/c/Users/xxxx_000/.ssh/id_rsa):   #不填直接回车
+5.Enter passphrase (empty for no passphrase):   #输入密码（可以为空）
+6.Enter same passphrase again:   #再次确认密码（可以为空）
+7.Your identification has been saved in /c/Users/xxxx_000/.ssh/id_rsa.   #生成的密钥
+8.Your public key has been saved in /c/Users/xxxx_000/.ssh/id_rsa.pub.  #生成的公钥
+9.The key fingerprint is:
+10.e3:51:33:xx:xx:xx:xx:xxx:61:28:83:e2:81 xxxxxx@yy.com
+</code></pre><p>生成ssh key的存放路径为：c:/Users/你电脑的用户名/.ssh/下。</p>
+<h2 id="（3）复制SSH-KEY到Github"><a href="#（3）复制SSH-KEY到Github" class="headerlink" title="（3）复制SSH KEY到Github"></a>（3）复制SSH KEY到Github</h2><p>到C盘你的用户目录下找到.ssh文件夹，查看里面是否有id_rsa和id_rsa.pub这两个文件。</p>
+<p>登录GitHub系统；点击右上角账号头像的“▼”→Settings→SSH and GPG kyes→new SSH key，Title自定义，复制id_rsa.pub的公钥内容到GitHub中Add an SSH key的key输入框，最后“Add Key”。</p>
+<h2 id="（4）配置账户"><a href="#（4）配置账户" class="headerlink" title="（4）配置账户"></a>（4）配置账户</h2><pre><code>1.$ git config --global user.name “your_username”  #设置用户名
+2.$ git config --global user.email “your_registered_github_Email” 
+3.#设置邮箱地址(建议用注册giuhub的邮箱)
+</code></pre><h2 id="（5）测试SSH-KEY是否设置成功"><a href="#（5）测试SSH-KEY是否设置成功" class="headerlink" title="（5）测试SSH KEY是否设置成功"></a>（5）测试SSH KEY是否设置成功</h2><pre><code>$ ssh -T git@github.com
+</code></pre><p>接下来会返回一些信息，并需要你输入一次yes，若生成ssh key时设置有密码则还会让你输入生成ssh key时设置的密码。<br>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. #出现词句话，说明设置成功。</p>
+<h1 id="下载并安装node-js"><a href="#下载并安装node-js" class="headerlink" title="下载并安装node.js"></a>下载并安装node.js</h1><h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><p>根据自己电脑操作系统的位数到官网下载相应的版本：<br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>根据自己的需要安装到相应的地方，其他的一路点击next即可。</p>
+<h2 id="配置环境变量-1"><a href="#配置环境变量-1" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>选中桌面图标计算机，右键选择属性，打开左边的高级系统设置，打开弹出窗口的环境变量，找到path进行编辑。<br>找到node.js的安装目录，将其复制后粘贴到path后面。注意每一个加进来的路径后面都要带英文格式的分号。</p>
+<h2 id="测试是否安装成功-1"><a href="#测试是否安装成功-1" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><p>打开命令提示符，输入：<br>node –version<br>如果安装成功，会打印出本机安装node.js的版本。</p>
+<h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>hexo是基于node.js的静态博客，官网也是搭建在GitHub上。</p>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><p>在你喜欢的路径下新建一个文件夹blog，用来存放博客的文件，在此文件夹中右键打开Git Bash<br>输入如下指令进行安装：<br>        $ npm install -g hexo-cli<br>如果执行这条命令时长时间未成功，那么请先使用下面的命令将npm镜像源更改为国内的镜像，再执行上面的安装命令，因为国外的镜像源很有可能被墙了。<br>        $ npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><pre><code>$ hexo init hexo
+</code></pre><p>这里会将Github上的hexo项目clone下来，得到hexo文件夹。<br>初始化成功后会在最后打印一行：INFO Start blogging with Hexo!</p>
+<h2 id="安装依赖文件"><a href="#安装依赖文件" class="headerlink" title="安装依赖文件"></a>安装依赖文件</h2><pre><code>1.$ cd hexo
+2.$ npm install
+</code></pre><h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h2><pre><code>$ hexo generate
+</code></pre><h2 id="本地启动测试"><a href="#本地启动测试" class="headerlink" title="本地启动测试"></a>本地启动测试</h2><pre><code>$ hexo server
+</code></pre><p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可访问到我们搭建好的hexo站点。<br>至此本地搭建已经完成。</p>
+<h1 id="将本地hexo项目托管到Github"><a href="#将本地hexo项目托管到Github" class="headerlink" title="将本地hexo项目托管到Github"></a>将本地hexo项目托管到Github</h1><h2 id="修改全局配置文件-config-yml"><a href="#修改全局配置文件-config-yml" class="headerlink" title="修改全局配置文件_config.yml"></a>修改全局配置文件_config.yml</h2><p>说明： hexo文件夹下一个_config.yml，我们称之为全局配置文件，在每个主题文件夹内还会有一个_config.yml文件，我们称之为主题配置文件。<br>用sublime text3或者notepad++等编辑器打开hexo文件夹下的_config.yml文件。<br>注意：配置文件中每个字段后面的冒号是英文格式的，且在其后要加一个空格再写值<br>编辑最后面的deploy属性，加入代码：<br>        1.type: git<br>        2.repository: <a href="https://github.com/你的Github用户名/你的Github用户名.github.io.git" target="_blank" rel="noopener">https://github.com/你的Github用户名/你的Github用户名.github.io.git</a><br>        3.branch: master</p>
+<h2 id="安装hexo-deployer-git插件"><a href="#安装hexo-deployer-git插件" class="headerlink" title="安装hexo-deployer-git插件"></a>安装hexo-deployer-git插件</h2><pre><code>$ npm install hexo-deployer-git --save
+</code></pre><h2 id="部署到Github上"><a href="#部署到Github上" class="headerlink" title="部署到Github上"></a>部署到Github上</h2><pre><code>1.$ hexo clean  #清除缓存 网页正常情况下可以忽略此条命令
+2.$ hexo generate  #生成静态页面至public目录
+3.$ hexo deploy  #将.deploy目录部署到GitHub
+</code></pre><p>执行hexo deploy命令之后，如果最后一行打印出如下信息则表示部署成功<br>        INFO  Deploy done: git<br>然后你再去访问你创建的Github pages地址，也就是：你的Github用户名.github.io，即可看到你本地的hexo项目已经被部署到github上去了。</p>
+<p>到此已经可以在网上访问到自己的博客了，如果想自定义博客的域名需要两个步骤<br>1.自己申请个域名，将博客地址解析到域名<br>2.在github项目下新建个CNAME文件，不要给后缀名，文件里输入你申请的域名即可</p>
+<p>这篇文章就到这里，下篇写下hexo主题更换以及文章如何上传。</p>
 
       
     </div>
@@ -591,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Page"><span class="nav-number">1.</span> <span class="nav-text">Github Page</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Page"><span class="nav-number">1.</span> <span class="nav-text">Github Page</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载并安装Git"><span class="nav-number">2.</span> <span class="nav-text">下载并安装Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-number">2.3.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试是否安装成功"><span class="nav-number">2.4.</span> <span class="nav-text">测试是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加SSH-KEY到Github"><span class="nav-number">3.</span> <span class="nav-text">添加SSH KEY到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#（1）检查本机是否有SSH-KEY设置"><span class="nav-number">3.1.</span> <span class="nav-text">（1）检查本机是否有SSH KEY设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（2）配置生成SSH-KEY"><span class="nav-number">3.2.</span> <span class="nav-text">（2）配置生成SSH KEY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（3）复制SSH-KEY到Github"><span class="nav-number">3.3.</span> <span class="nav-text">（3）复制SSH KEY到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（4）配置账户"><span class="nav-number">3.4.</span> <span class="nav-text">（4）配置账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（5）测试SSH-KEY是否设置成功"><span class="nav-number">3.5.</span> <span class="nav-text">（5）测试SSH KEY是否设置成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载并安装node-js"><span class="nav-number">4.</span> <span class="nav-text">下载并安装node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载-1"><span class="nav-number">4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-1"><span class="nav-number">4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量-1"><span class="nav-number">4.3.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试是否安装成功-1"><span class="nav-number">4.4.</span> <span class="nav-text">测试是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装和配置hexo"><span class="nav-number">5.</span> <span class="nav-text">安装和配置hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-2"><span class="nav-number">5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化hexo"><span class="nav-number">5.2.</span> <span class="nav-text">初始化hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装依赖文件"><span class="nav-number">5.3.</span> <span class="nav-text">安装依赖文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成静态页面"><span class="nav-number">5.4.</span> <span class="nav-text">生成静态页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地启动测试"><span class="nav-number">5.5.</span> <span class="nav-text">本地启动测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将本地hexo项目托管到Github"><span class="nav-number">6.</span> <span class="nav-text">将本地hexo项目托管到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改全局配置文件-config-yml"><span class="nav-number">6.1.</span> <span class="nav-text">修改全局配置文件_config.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo-deployer-git插件"><span class="nav-number">6.2.</span> <span class="nav-text">安装hexo-deployer-git插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github上"><span class="nav-number">6.3.</span> <span class="nav-text">部署到Github上</span></a></li></ol></li></ol></div>
             
 
           </div>
